@@ -1,0 +1,16 @@
+<div class="Login-form">
+  <h1 class="display-4">Hello, Welcome!</h1>
+  <p class="lead">Please log into Erp system</p>
+  <hr class="my-4">
+  <input [(ngModel)]="userName" name="userName" class="form-control" type="text" placeholder="User Name">
+  <input [(ngModel)]="password" name="password" class="form-control" type="password" placeholder="Password">
+  <p class="lead">
+    <button (click)="login()" class="btn btn-info">Sign in</button>
+  </p>
+  <div *ngIf="loginCorrect" class="alert alert-success">
+    Logged in!
+  </div>
+  <div *ngIf="loginError" class="alert alert-danger">
+    Please check username or password!
+  </div>
+</div>
